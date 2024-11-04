@@ -1,0 +1,137 @@
+/* ScrollingText.css */
+
+.scrollingTextContainer {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #ffffff; /*Optional border for visibility*/
+   background-color: #f4f4f4; /* Optional: background color to contrast text */
+}
+
+.scrollingText {
+  display: inline-block;
+  padding-right: 100%; /* Ensures text wraps back smoothly */
+  animation: scrollText 60s linear infinite; /* Adjust the duration as needed */
+  font-size: 1.5rem; /* Adjust font size as needed */
+  color: #000; /* Ensure text is visible against background */
+}
+.scrollingText h1 {
+  margin: 100px 0px 70px 0px;
+  font-size: 70px; /* Slightly smaller font for better readability */
+  font-family: "Times New Roman", Times, serif;
+  color: #6a5e40;
+  font-weight: bold; /* Add weight for emphasis */
+  letter-spacing: 2px; /* Increase spacing for readability */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+
+  /* Add gradient text effect */
+  background: linear-gradient(45deg, #032c0e, #a62426);
+  -webkit-background-clip: text;
+  color: transparent;
+
+  /* Add text stroke */
+  -webkit-text-stroke: 1px #000;
+
+  /* Add animation for blinking effect */
+  animation: blink 1s infinite;
+}
+
+/* Keyframes for blinking effect */
+/* @keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+} */
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(10%); /* Start off-screen to the right */
+  }
+  100% {
+    transform: translateX(-100%); /* Move completely off-screen to the left */
+  }
+}
+
+.aboutContainer {
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  padding: 2rem;
+  background-color: #f4f4f4;
+}
+
+.content {
+  max-width: 60vw;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.imageContainer {
+  width: 100%;
+  /* text-align: right; */
+  /* justify-content: right; */
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+.imageContainer img {
+  width: 100%;
+  justify-content: right;
+  border-radius: 10px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 800px;
+  border-top: 1px solid #ddd;
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statItem h3 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.statItem p {
+  font-size: 0.9rem;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+@media (max-width: 600px) {
+  .scrollingText h1{
+    font-size: 2rem;
+  }
+  .aboutContainer{
+    display: contents;
+    margin: 10px 10px 10px 10px;
+  }
+  .content{
+    margin-left: 50px;
+  }
+}

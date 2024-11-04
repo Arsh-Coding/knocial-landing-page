@@ -1,0 +1,80 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  background-color: #000; /* Changed to black */
+  color: #fff; /* Changed to white */
+}
+
+.footerSection {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.footerLogo {
+  width: 120px;
+}
+
+.footerDescription {
+  margin-top: 20px;
+  color: #ccc; /* Light grey for better readability on black */
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footerSection h3 {
+  font-size: 16px;
+  color: #fff; /* Changed to white */
+  margin-bottom: 15px;
+}
+
+.footerSection ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerSection ul li {
+  margin-bottom: 8px;
+}
+
+.footerSection ul li a {
+  color: #fff; /* Changed to white */
+  text-decoration: none;
+}
+
+.footerSection ul li a:hover {
+  color: #0f77ac;
+}
+
+.footerSection p {
+  margin: 8px 0;
+  color: #ccc; /* Light grey for readability */
+}
+
+.footerSection a {
+  color: #fff; /* Changed to white */
+  text-decoration: none;
+}
+
+.footerSection a:hover {
+  color: #0f77ac;
+}
+
+.footerSection strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    display: contents;
+    background-color: black;
+  }
+}
+@media (max-width: 600px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+  }
+}

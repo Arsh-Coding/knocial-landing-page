@@ -1,0 +1,12 @@
+.heading {
+  margin: 10px auto;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  word-spacing: 0.3rem; /* Adjust the word spacing */
+  /* display: inline; */
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .heading{
+    margin-left: 25px;
+  }
+}

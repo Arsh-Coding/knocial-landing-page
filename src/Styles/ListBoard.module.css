@@ -1,0 +1,50 @@
+.boardContainer {  
+    text-align: center;  
+    margin: 20px;  
+}  
+
+.boardTitle {  
+    padding: 2vh;
+    background-color: black;
+    color: #ffff;
+    font-size: 24px;  
+    margin-bottom: 20px;  
+    font-weight: bold;  
+}  
+
+.boardTable {  
+    width: 100%; 
+    /* margin: 10px;  */
+    border-collapse: collapse;  
+}  
+
+.boardRow {  
+    background-color: #f0f0f0; /* Light grey */  
+    
+}  
+
+.boardRow:nth-child(even) {  
+    background-color: #e0e0e0; /* Slightly darker grey */  
+}  
+
+.logoCell {  
+    width: 20%;  
+    margin: 20px;
+    font-weight: bold;  
+}  
+
+.memberName {  
+    width: 40%;  
+    padding: 10px;  
+}  
+
+.memberPosition {  
+    width: 40%;  
+    padding: 10px;  
+}  
+
+.footer {  
+    
+    margin-top: 20px;  
+    font-weight: bold;  
+}

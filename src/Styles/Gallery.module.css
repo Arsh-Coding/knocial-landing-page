@@ -1,0 +1,115 @@
+/* Container for the main slideshow images */
+.slideshow-container {
+  justify-content: center;
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+}
+.mySlides {
+    /* position: absolute; */
+    margin-top: 10vh;
+  margin-left: 20vw;
+}
+/* Style for the images */
+.mySlides img {
+  justify-content: center;
+  width: 80%;
+  height: 50vh;
+}
+
+/* Caption text */
+.text {
+    position: absolute;
+  color: #f2f2f2;
+  font-size: 20px;
+  padding: 8px 12px;
+  top: 60%;
+  /* position: absolute; */
+  /* bottom: 8px; */
+  margin-left: 10vw;
+  width: 40vw;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.3s;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 2vw;
+  border-radius: 3px 0 0 3px;
+}
+.prev{
+  left: 2vw;
+}
+/* Thumbnail images */
+.thumbnailrow {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.thumbnail {
+  cursor: pointer;
+  width: 75px;
+  height: auto;
+  margin: 5px;
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.thumbnail:hover,
+.active-thumbnail {
+  opacity: 1;
+}
+@media (max-width: 600px) {
+  .mySlides {
+    width: 150vw;
+    margin-top: 5vh;
+    margin-left: 5vw;
+  }
+
+  .mySlides img {
+    width: 70%;
+    height: 30vh;
+  }
+
+  .text {
+    font-size: 16px;
+    /* padding: 5px 10px; */
+    top: 50%;
+    width: 70vw;
+    margin-left: 0;
+    left: 60%;
+    transform: translateX(-50%);
+  }
+
+  .prev,
+  .next {
+    padding: 12px;
+    font-size: 13px;
+    top: 45%;
+    justify-content: space-between;
+  }
+  .next{
+    margin-right: -40px;
+  }
+
+  .thumbnail {
+    width: 50px;
+  }
+}
