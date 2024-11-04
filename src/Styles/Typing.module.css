@@ -1,0 +1,11 @@
+.typingtext{
+    font-size: 3rem;
+    width: 10vh;
+    color: aliceblue;
+}
+@media (max-width: 600px) {
+    .typingtext{
+        font-size: 1rem;
+
+    }
+}

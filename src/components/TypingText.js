@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-
+import styles from "../Styles/Typing.module.css";
 const TypingText = ({ texts, speed, delayBetweenTexts }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [index, setIndex] = useState(0);
@@ -29,7 +29,7 @@ const TypingText = ({ texts, speed, delayBetweenTexts }) => {
     }
   }, [charIndex, isDeleting, index, speed, texts, delayBetweenTexts]);
 
-  return <p style={{ fontSize: "1.5rem", color: "white"}}>{displayedText}</p>;
+  return <p className={styles.typingtext}>{displayedText}</p>;
 };
 
 export default TypingText;
