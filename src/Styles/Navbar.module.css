@@ -182,7 +182,12 @@
   .sidebar {
     display: block; /* Sidebar becomes accessible */
   }
-
+  .navlinksMobile{
+    color: white;
+  }
+.heading{
+  color: white;
+}
   .navlinksDesktop {
     display: none; /* Hide desktop navigation links */
   }

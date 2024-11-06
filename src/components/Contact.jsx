@@ -52,7 +52,7 @@ const RequestForm = () => {
           <input type="text" name="lastName" required onChange={handleChange} />
         </div>
         <div className={styles.fieldGroup}>
-          <label>Email*</label>
+          <label>Email*</label><br/>
           <input type="email" name="email" required onChange={handleChange} />
         </div>
         <div className={styles.fieldGroup}>
@@ -65,18 +65,20 @@ const RequestForm = () => {
           />
         </div>
         <div className={styles.fieldGroup}>
-          <label>Region*</label>
+          <label>Region*</label><br/>
           <select name="region" required onChange={handleChange}>
             <option value="" disabled>
               Select your region
             </option>
             <option value="North America">North America</option>
             <option value="Europe">Europe</option>
-            {/* Add more options as needed */}
+            <option value="Asia">Asia</option>
+            <option value="Australia">Australia</option>
+           
           </select>
         </div>
         <div className={styles.fieldGroup}>
-          <label>Industry*</label>
+          <label>Industry*</label><br/>
           <select name="industry" required onChange={handleChange}>
             <option value="" disabled>
               Select your industry
