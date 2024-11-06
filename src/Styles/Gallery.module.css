@@ -78,7 +78,7 @@
 }
 @media (max-width: 600px) {
   .mySlides {
-    width: 150vw;
+    width: 100vw;
     margin-top: 5vh;
     margin-left: 5vw;
   }

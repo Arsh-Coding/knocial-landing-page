@@ -42,10 +42,10 @@ const Home = () => {
         </div>
       </div>
       <div id="description">
-        <Description />
+      <Description/>
       </div>
-      <Numbers />
-      <BoardOfDirectors />
+      <Numbers/>
+      <BoardOfDirectors/>
       <div className={styles.revenueModel}>
         <h2 className={styles.titlerevenue}>Our Revenue Representation</h2>
         <img className={styles.revenue} src={RevenueImage} alt="Revenue" />

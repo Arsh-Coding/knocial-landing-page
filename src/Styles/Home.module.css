@@ -10,8 +10,11 @@ body {
   height: 100%;
   font-family: Arial, sans-serif;
 }
-.mainheading{
+.mainheading {
   background-color: none;
+  color: #333333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5),
+    /* Subtle outer shadow */ 0 6px 20px rgba(0, 0, 0, 0.19); /* Slightly larger shadow */
 }
 .container {
   position: relative;
@@ -40,22 +43,22 @@ body {
 .content {
   position: absolute;
   /* color: white; */
-  top: 50%;
+  top: 30%;
   left: 10vw;
   transform: translateY(-50%);
 }
 
 .content h1 {
-  color: white;
-  white-space: nowrap; /* Prevents text wrapping */
-  font-size: 2.5rem;
+      color: rgba(0, 0, 0, 0.45);
+    font-weight: 900;
+    white-space: nowrap;
+    font-size: 3.5rem;
 }
 
 .inlineTyping {
   /* font-size: 2.5rem; */
   display: inline-block;
 }
-
 .description {
   color: white;
   margin-top: 20px;
@@ -81,22 +84,29 @@ body {
   transition: background-position 0.5s ease-in-out;
 }
 
+.closeBtn {
+  color: white;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .content {
-    /* left: 5vw; */
     text-align: left;
   }
 
   .content h1 {
     color: aliceblue;
-    font-size: 2rem;
+    font-size: 3rem;
     white-space: normal; /* Allows text wrapping on small screens */
   }
 
   .description {
     font-size: 0.9rem;
     margin-top: 15px;
+  }
+  .revenue {
+    margin-left: 0;
+    width: 100vw;
   }
 }
 .revenueModel {
@@ -111,7 +121,8 @@ body {
   color: rgb(255, 255, 255);
 }
 .revenue {
-  width: 100vw;
+  width: 95vw;
+  margin-left: 25px;
   height: 60vh;
   /* margin-left: 20vw; */
 }
@@ -119,23 +130,27 @@ body {
   .header {
     height: 8vh;
   }
-
   .inlineTyping {
     display: flex;
-    font-size: 0.5rem;
+    font-size: 1.5rem;
   }
   .content h1 {
     color: aliceblue;
-    font-size: 1rem;
+    font-size: 2rem;
     margin-bottom: 40px;
+    margin-left: -34px;
   }
   .mainheading {
-    font-size: 20px;
+    font-size: 1.5rem;
   }
   .description {
     font-size: 0.8rem;
   }
   .exploreButton {
     width: 70vw;
+  }
+  .revenue {
+    margin-left: 0;
+    width: 100vw;
   }
 }

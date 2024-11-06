@@ -46,3 +46,12 @@
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+@media (max-width : 600px) {
+  .card{
+    margin-left: -10px;
+  }
+  .container{
+    margin-left: 0;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

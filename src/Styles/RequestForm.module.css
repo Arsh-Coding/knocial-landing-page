@@ -15,6 +15,7 @@
 .title {  
   font-size: 28px; /* Larger title */  
   margin-bottom: 15px;  
+  color: #000;
 }  
 
 .description {  

@@ -32,6 +32,27 @@ const About = () => {
           CIN U74999HR2020PLC090598
         </p>
       </footer>
+      <div className={StyleSheet.expretise}>
+        <h1>Our Expertise</h1>
+        <p>
+          At Knocial India Limited, we are dedicated to providing a
+          comprehensive range of innovative solutions designed to empower
+          businesses in today’s digital landscape. Our services span across
+          custom software development, cloud computing, and digital
+          transformation strategies tailored to help companies of all sizes
+          streamline their operations and achieve their objectives. We
+          specialize in developing scalable applications, optimizing IT
+          infrastructure, and delivering robust data analytics solutions to
+          provide actionable insights. Additionally, our expert team offers
+          end-to-end consulting in cybersecurity, ensuring that our clients’
+          data is secure and compliant with industry standards. With a
+          commitment to integrity, prosperity, and dignity, we go beyond just
+          offering services; we partner with our clients to foster long-term
+          growth and success. Whether you are looking to modernize legacy
+          systems or launch cutting-edge digital platforms, Knocial India
+          Limited is here to help you every step of the way.
+        </p>
+      </div>
       <Milestones/>
       <ServerRentalModel/>
       <ProductsBenefits/>

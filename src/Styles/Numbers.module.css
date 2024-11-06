@@ -7,21 +7,19 @@ body {
 }
 
 .numbers-container {
-
   text-align: center;
   color: #333;
 }
 
 .header {
-    margin: 30px 0 30px 0;
+  margin: 30px 0 30px 0;
   background-color: #000;
   color: white;
   padding: 10px 0;
 }
-
 .header p {
-    text-align: center;
-    color: white;
+  text-align: center;
+  color: white;
   margin: 0;
   /* font-weight: bold; */
   font-size: 30px;
@@ -42,14 +40,12 @@ body {
   margin-bottom: 30px;
   color: #333;
 }
-
 .stats {
   display: flex;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
 }
-
 .stat-card {
   display: flex;
   flex-direction: column;
@@ -62,12 +58,10 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   animation: fadeInUp 1s ease both;
 }
-
 .stat-card:hover {
   transform: translateY(-10px);
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
 }
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -85,7 +79,7 @@ body {
   color: #003366;
   margin-bottom: 10px;
 }
-.statValue{
+.statValue {
   font-size: 3rem;
   color: #003366;
   font-weight: bold;
@@ -110,14 +104,14 @@ body {
 }
 
 .footer p {
-    text-align: center;
-    color: aliceblue;
+  text-align: center;
+  color: aliceblue;
   font-size: 18px;
   letter-spacing: 1px;
   margin: 0;
 }
 @media (max-width: 600px) {
-  .datedata{
+  .datedata {
     display: none;
   }
 }

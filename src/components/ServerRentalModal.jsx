@@ -17,7 +17,7 @@ const ServerRentalModel = () => {
           </ul>
         </div>
         <div className={styles.kocial}>
-          <h2>KNOICIAL</h2>
+          <h2>KNOCIAL</h2>
           <ul>
             <li>On Going Assets</li>
             <li>Building Assets (As per Client Requirements)</li>

@@ -3,6 +3,7 @@
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   word-spacing: 0.3rem; /* Adjust the word spacing */
   /* display: inline; */
+  color: black;
   text-align: center;
 }
 @media (max-width: 600px) {

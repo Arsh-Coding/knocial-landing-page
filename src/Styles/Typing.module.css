@@ -1,11 +1,36 @@
-.typingtext{
-    font-size: 3rem;
-    width: 10vh;
-    color: aliceblue;
+.typingtext {
+  font-size: 3rem;
+  width: 10vh;
+  color: rgba(240, 248, 255, 0);
+  color: transparent; /* Make text transparent */
+  -webkit-text-stroke: 3px #0c0c46; /* Outline color and thickness */
+  font-weight: normal; /* Regular weight for outlined text */
+}
+.finalText {
+  color: #000; /* Full color for the last fully typed-out word */
+  opacity: 0; /* Optional transparency to distinguish the placeholder text */
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+}
+
+.dynamicText {
+    /* display: none; */
+  color: #00000000; /* Color of the currently typing text */
+  position: relative;
+  white-space: nowrap;
+  border-right: 3px solid black; /* Optional cursor effect */
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
 @media (max-width: 600px) {
-    .typingtext{
-        font-size: 1rem;
-
-    }
+  .typingtext {
+    font-size: 2rem;
+    -webkit-text-stroke: 1px #000000;
+  }
 }

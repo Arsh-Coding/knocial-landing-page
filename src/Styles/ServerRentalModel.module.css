@@ -2,35 +2,30 @@
     text-align: center;  
     margin: 20px;  
 }  
-
-.header {  
+.header {
     font-size: 24px;  
     font-weight: bold;  
     margin-bottom: 20px;  
-}  
-
-.grid {  
-    display: flex;  
-    justify-content: space-around;  
-    border: 1px solid #000;  
-    padding: 20px;  
-    background-color: #f7f7f7;  
-}  
-
+}
+.grid {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #000;
+    padding: 20px;
+    background-color: #f7f7f7;
+}
 .section {  
     width: 30%;  
     padding: 10px;  
     border: 1px solid #ccc;  
     background-color: #ffffff;  
-}  
-
+}
 .kocial {  
     width: 30%;  
     padding: 10px;  
     border: 1px solid #ccc;  
     background-color: #e0f7fa; /* Light blue background */  
-}  
-
+}
 h2 {  
     font-size: 20px;  
     font-weight: bold;  
@@ -41,4 +36,16 @@ ul {
     list-style-type: disc;  
     text-align: left;  
     padding-left: 20px;  
+}
+@media (max-width: 600px) {
+    .grid{
+        display: block;
+        padding: 20px;
+    }
+    .kocial{
+        width: 70vw;
+    }
+    .section{
+        width: 70vw;
+    }
 }

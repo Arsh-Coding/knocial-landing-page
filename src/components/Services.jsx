@@ -10,7 +10,6 @@ const Services = () => {
       <h1 className={Styles.heading}>Services</h1>
     </div>
       <Gallery/>
-      
       <SumServices/>
     </>
   );

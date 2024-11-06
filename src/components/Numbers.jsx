@@ -18,11 +18,6 @@ const statsData = [
 const Numbers = () => {
   return (
     <div className={styles.numbersContainer}>
-      <div className={styles.header}>
-        <p>
-          These are our Numbers <span className={styles.datedata}>(As on 31 Mar 2024)</span>
-        </p>
-      </div>
       <h2 className={styles.title}>The Stage Has Been Set</h2>
       <div className={styles.stats}>
         {statsData.map((stat, index) => (

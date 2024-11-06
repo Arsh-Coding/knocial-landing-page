@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import styles from "../Styles/Typing.module.css";
+
 const TypingText = ({ texts, speed, delayBetweenTexts }) => {
   const [displayedText, setDisplayedText] = useState("");
+  const [finalText, setFinalText] = useState(texts[0]); // Last fully typed-out word
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -22,6 +24,7 @@ const TypingText = ({ texts, speed, delayBetweenTexts }) => {
       }, speed);
       return () => clearTimeout(timeoutId);
     } else if (!isDeleting && charIndex === currentText.length) {
+      setFinalText(currentText); // Update finalText when fully typed
       setTimeout(() => setIsDeleting(true), delayBetweenTexts);
     } else if (isDeleting && charIndex === 0) {
       setIsDeleting(false);
@@ -29,7 +32,12 @@ const TypingText = ({ texts, speed, delayBetweenTexts }) => {
     }
   }, [charIndex, isDeleting, index, speed, texts, delayBetweenTexts]);
 
-  return <p className={styles.typingtext}>{displayedText}</p>;
+  return (
+    <p className={styles.typingtext}>
+      <span className={styles.finalText}>{finalText}</span>
+      <span className={styles.dynamicText}>{displayedText}</span>
+    </p>
+  );
 };
 
 export default TypingText;
