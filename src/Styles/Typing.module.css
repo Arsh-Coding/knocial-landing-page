@@ -14,7 +14,6 @@
   top: 0;
   white-space: nowrap;
 }
-
 .dynamicText {
     /* display: none; */
   color: #00000000; /* Color of the currently typing text */
@@ -31,6 +30,15 @@
 @media (max-width: 600px) {
   .typingtext {
     font-size: 2rem;
-    -webkit-text-stroke: 1px #000000;
+    -webkit-text-stroke: 1px #ffffff;
+  }
+  .typingtext{
+    color: white;
+  }
+  .finalText{
+    color: white;
+  }
+  .dynamicText {
+    color: white;
   }
 }

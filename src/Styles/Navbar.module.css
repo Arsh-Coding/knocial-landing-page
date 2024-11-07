@@ -9,7 +9,7 @@
   padding: 0 20px;
   overflow-x: hidden; /* Prevents horizontal scroll */
 }
-.linkthis{
+.linkthis {
   color: #fff;
 }
 /* Logo styling */
@@ -26,36 +26,65 @@
   display: flex;
   gap: 30px;
 }
-
+.dropdownMenu :hover{
+  font-size: 25px;
+}
 .navlinksDesktop li {
   list-style: none;
 }
-.heading{
+.navlinksDesktop li :hover {
+  transition: 0.4s;
+  font-size: 20px;
+  color: #aa9db7; /* Adds hover effect */
+}
+.heading {
   font-weight: 700;
+  cursor: context-menu;
+}
+.heading :hover {
+  color: #aa9db7;
 }
 .navlinksDesktop a {
   color: black;
   text-decoration: none;
   font-weight: bold;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s ease;
 }
-
+.navlinksDesktop a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 3px;
+  background-color: #1a1a1a; /* Hover line color */
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: bottom right;
+}
 .navlinksDesktop a:hover {
-  color: #1a1a1a; /* Adds hover effect */
+  font-size: 20px;
+  color: #aa9db7; /* Adds hover effect */
+  transition: 0.4s;
 }
 
 /* Dropdown menu styling */
 .dropdownMenu {
+  cursor: pointer;
   display: none;
   position: absolute;
   background-color: rgba(219, 215, 215, 0.5);
   /* color: aliceblue; */
   padding: 15px;
-  
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   list-style-type: none;
   z-index: 10;
 }
-
+.dropdownMenu :hover {
+  color: #aa9db7;
+}
 .navlinksDesktop li:hover .dropdownMenu {
   display: block;
 }
@@ -182,18 +211,17 @@
   .sidebar {
     display: block; /* Sidebar becomes accessible */
   }
-  .navlinksMobile{
+  .navlinksMobile {
     color: white;
   }
-.heading{
-  color: white;
-}
+  .heading {
+    color: skyblue;
+  }
   .navlinksDesktop {
     display: none; /* Hide desktop navigation links */
   }
-
   .logotitle {
     font-size: 20px;
-    left: 15vw;
+    left: 25vw;
   }
 }

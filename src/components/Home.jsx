@@ -23,6 +23,9 @@ const Home = () => {
       <div className={styles.container}>
         <img className={styles.background} src={myImage} alt="background.gif" />
         <div className={styles.content}>
+          <div className={styles.KnocialIndia}>
+            Information Technology (IT) services
+          </div>
           <h1 className={styles.mainHeading}>
             At Knocial, we provide solutions <br /> that drive your success:{" "}
             <span className={styles.inlineTyping}>
@@ -42,15 +45,15 @@ const Home = () => {
         </div>
       </div>
       <div id="description">
-      <Description/>
+        <Description />
       </div>
-      <Numbers/>
-      <BoardOfDirectors/>
+      <Numbers />
+      <BoardOfDirectors />
       <div className={styles.revenueModel}>
         <h2 className={styles.titlerevenue}>Our Revenue Representation</h2>
         <img className={styles.revenue} src={RevenueImage} alt="Revenue" />
       </div>
-      <ListBoardMembers/>
+      <ListBoardMembers />
     </>
   );
 };

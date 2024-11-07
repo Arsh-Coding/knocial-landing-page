@@ -44,7 +44,7 @@ const Navbar = () => {
         <img src={Image} alt="Knocial Logo" height={"40px"} />
       </div>
       <span className={Styles.logotitle}>KNOCIAL India Ltd</span>
-
+      
       {/* Main navigation links for larger screens */}
       <ul className={Styles.navlinksDesktop}>
         <li>
