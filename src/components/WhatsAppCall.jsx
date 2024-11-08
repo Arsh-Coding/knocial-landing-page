@@ -10,7 +10,6 @@ const Contact = () => {
   };
   return (
     <div>
-      
       <img
         className={Styles.waiconEdit}
         src={waicon}
