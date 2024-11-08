@@ -1,8 +1,12 @@
 // src/components/RequestForm.js
 import React, { useState } from "react";
 import styles from "../Styles/RequestForm.module.css"; // Import CSS module
+import { sendMessage } from "./services/WhatsAppApi";
+import WhatsAppCall from "./WhatsAppCall";
+
 
 const RequestForm = () => {
+  
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -22,13 +26,11 @@ const RequestForm = () => {
       [name]: type === "checkbox" ? checked : value,
     }));
   };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle form submission logic
     console.log(formData);
   };
-
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Request for Services</h1>
@@ -52,7 +54,8 @@ const RequestForm = () => {
           <input type="text" name="lastName" required onChange={handleChange} />
         </div>
         <div className={styles.fieldGroup}>
-          <label>Email*</label><br/>
+          <label>Email*</label>
+          <br />
           <input type="email" name="email" required onChange={handleChange} />
         </div>
         <div className={styles.fieldGroup}>
@@ -65,7 +68,8 @@ const RequestForm = () => {
           />
         </div>
         <div className={styles.fieldGroup}>
-          <label>Region*</label><br/>
+          <label>Region*</label>
+          <br />
           <select name="region" required onChange={handleChange}>
             <option value="" disabled>
               Select your region
@@ -74,11 +78,11 @@ const RequestForm = () => {
             <option value="Europe">Europe</option>
             <option value="Asia">Asia</option>
             <option value="Australia">Australia</option>
-           
           </select>
         </div>
         <div className={styles.fieldGroup}>
-          <label>Industry*</label><br/>
+          <label>Industry*</label>
+          <br />
           <select name="industry" required onChange={handleChange}>
             <option value="" disabled>
               Select your industry
@@ -98,10 +102,9 @@ const RequestForm = () => {
           />
         </div>
         
-        <button type="submit" className={styles.submitButton}>
-          Send
-        </button>
+        <button className={styles.submitButton}>Send</button>
       </form>
+      <WhatsAppCall/>
     </div>
   );
 };

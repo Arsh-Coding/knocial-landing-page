@@ -10,12 +10,13 @@ import ServerRentalModel from "./components/ServerRentalModal";
 import ProductsBenefits from "./components/ProductsBenefits";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
-
+import WhatsAppCall from "./components/WhatsAppCall";
 import "./App.css";
 
 const App = () => {
   return (
     <Router>
+      <WhatsAppCall/>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
