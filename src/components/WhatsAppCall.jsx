@@ -1,7 +1,7 @@
 // components/Contact.js
 import React from "react";
 
-// import { sendMessage } from "./services/WhatsAppApi";
+import { sendMessage } from "./services/WhatsAppApi";
 import waicon from "../assets/whatsapp.png";
 import Styles from "../Styles/Wa.module.css";
 const Contact = () => {
