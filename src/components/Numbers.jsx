@@ -1,4 +1,3 @@
-
 import React from "react";
 import styles from "../Styles/Numbers.module.css";
 import trophyIcon from "../assets/Awards.webp";
@@ -27,9 +26,6 @@ const Numbers = () => {
             <img src={stat.icon} alt={stat.label} className={styles.statIcon} />
           </div>
         ))}
-      </div>
-      <div className={styles.footer}>
-        <p>KNOCIAL</p>
       </div>
     </div>
   );

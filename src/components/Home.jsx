@@ -8,6 +8,7 @@ import { Link } from "react-scroll";
 import Numbers from "./Numbers";
 import BoardOfDirectors from "./BoardOfDirectors";
 import ListBoardMembers from "./ListBoardMembers";
+import ProductsAndBenefits from "./ProductsBenefits"
 // import Footer from "./Footer";
 
 const Home = () => {
@@ -54,6 +55,7 @@ const Home = () => {
         <img className={styles.revenue} src={RevenueImage} alt="Revenue" />
       </div>
       <ListBoardMembers />
+      <ProductsAndBenefits/>
     </>
   );
 };

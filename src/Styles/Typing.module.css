@@ -1,13 +1,14 @@
 .typingtext {
-  font-size: 3rem;
+  font-size: 3.5rem;
   width: 10vh;
+  /* font-weight: 1000; */
   color: rgba(240, 248, 255, 0);
   color: transparent; /* Make text transparent */
-  -webkit-text-stroke: 3px #0c0c46; /* Outline color and thickness */
+  -webkit-text-stroke: 1px #fefefe; /* Outline color and thickness */
   font-weight: normal; /* Regular weight for outlined text */
 }
 .finalText {
-  color: #000; /* Full color for the last fully typed-out word */
+  color: #f9f8f8; /* Full color for the last fully typed-out word */
   opacity: 0; /* Optional transparency to distinguish the placeholder text */
   position: absolute;
   left: 0;
@@ -16,10 +17,10 @@
 }
 .dynamicText {
     /* display: none; */
-  color: #00000000; /* Color of the currently typing text */
+  color: #ffffff00; /* Color of the currently typing text */
   position: relative;
   white-space: nowrap;
-  border-right: 3px solid black; /* Optional cursor effect */
+  border-right: 3px solid rgb(255, 255, 255); /* Optional cursor effect */
   animation: blink 0.7s infinite;
 }
 @keyframes blink {

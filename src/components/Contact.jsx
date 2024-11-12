@@ -1,12 +1,14 @@
 // src/components/RequestForm.js
-import React, { useState } from "react";
-import styles from "../Styles/RequestForm.module.css"; // Import CSS module
-// import { sendMessage } from "./services/WhatsAppApi";
+import React, { useState, useEffect } from "react";
+import styles from "../Styles/RequestForm.module.css";
 import WhatsAppCall from "./WhatsAppCall";
 
-
 const RequestForm = () => {
-  
+  const [isLoaded, setIsLoaded] = useState(false);
+  useEffect(() => {
+    setTimeout(() => setIsLoaded(true), 100); // Delay for smoother effect
+  }, []);
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -32,7 +34,7 @@ const RequestForm = () => {
     console.log(formData);
   };
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${isLoaded ? styles.loaded : ""}`}>
       <h1 className={styles.title}>Request for Services</h1>
       <p className={styles.description}>
         We've driven growth and purposeful transformation across every industry
@@ -101,10 +103,10 @@ const RequestForm = () => {
             required
           />
         </div>
-        
+
         <button className={styles.submitButton}>Send</button>
       </form>
-      <WhatsAppCall/>
+      <WhatsAppCall />
     </div>
   );
 };
