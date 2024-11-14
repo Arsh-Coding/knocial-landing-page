@@ -1,117 +1,229 @@
-/* src/components/Numbers.css */
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
-  margin: 0;
-}
-
-.numbers-container {
-  text-align: center;
-  color: #333;
-}
-
-.header {
-  margin: 30px 0 30px 0;
-  background-color: #000;
-  color: white;
-  padding: 10px 0;
-}
-.header p {
-  text-align: center;
-  color: white;
-  margin: 0;
-  /* font-weight: bold; */
-  font-size: 30px;
-}
-
-.header span {
-  font-weight: normal;
-  font-size: 12px;
-  color: #ccc;
-}
-
-.title {
-  padding-bottom: 50px;
-  text-align: center;
-  font-size: 50px;
-  font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  color: #333;
-}
-.stats {
+/* * {box-sizing:border-box} */
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:wght@200;300;400;500;600;700&family=Rubik+Broken+Fax&family=Ubuntu:ital,wght@1,300&display=swap");
+/* Slideshow container */
+.container {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-.stat-card {
-  display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 20vw;
   padding: 20px;
-  width: 150px;
-  background: white;
+}
+.slideshow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  /* max-width: 500px; */
+  height: auto;
+  position: relative;
+  overflow: hidden;
   border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  animation: fadeInUp 1s ease both;
+  margin-right: 50vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.stat-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+.headingNumbers {
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  font-style: italic;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  color: black;
 }
-@keyframes fadeInUp {
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  display: none;
+  cursor: pointer;
+  top: 50%;
+
+  margin-top: 4px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  margin: 0 10px;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation: fade 1.5s ease-in-out, scaleIn 3s ease-in-out;
+}
+
+@keyframes fade {
   from {
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 0.4;
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 
-.stat-value {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #003366;
-  margin-bottom: 10px;
-}
-.statValue {
-  font-size: 3rem;
-  color: #003366;
-  font-weight: bold;
-}
-.stat-label {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 10px;
+/* New scaling animation */
+@keyframes scaleIn {
+  from {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
-.stat-icon {
-  width: 50px;
-  height: auto;
-  margin-top: 10px;
-}
-
-.footer {
-  background-color: #000;
-  color: white;
-  padding: 15px 0;
-  margin-top: 30px;
-}
-
-.footer p {
+/* Center dots */
+.dotContainer {
   text-align: center;
-  color: aliceblue;
-  font-size: 18px;
-  letter-spacing: 1px;
-  margin: 0;
+  padding: 10px 0;
+}
+
+.imageComp {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+}
+
+/* Card styles */
+.cardtitle {
+  color: #262626;
+  font-size: 1.5em;
+  line-height: normal;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.smalldesc {
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5em;
+  color: #452c2c;
+}
+
+.gocorner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, #6293c8, #384c6c);
+  border-radius: 0 4px 0 32px;
+}
+
+.goarrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.card {
+  display: block;
+  position: relative;
+  max-width: 400px;
+  height: 45vh;
+  max-height: 520px;
+  background-color: #f2f8f9;
+  border-radius: 10px;
+  padding: 2em 1.2em;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #c3e6ec, #a7d1d9);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: linear-gradient(135deg, #364a60, #384c6c);
+  height: 32px;
+  width: 32px;
+  border-radius: 32px;
+  transform: scale(1);
+  transition: transform 0.35s ease-out;
+}
+
+.card:hover:before {
+  transform: scale(28);
+}
+
+.card:hover .smalldesc {
+  transition: all 0.5s ease-out;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.card:hover .cardtitle {
+  transition: all 0.5s ease-out;
+  color: #ffffff;
 }
 @media (max-width: 600px) {
-  .datedata {
-    display: none;
+  .container {
+    display: block;
+  }
+  .headingNumbers {
+    font-size: 30px;
+  }
+  .imageComp {
+    width: 50%;
+    margin-left: 23vw;
   }
 }
