@@ -55,16 +55,23 @@ const ProductsBenefits = () => {
             <div>
               <em>{product.estimateRevenue} (Estimate Revenue for 7 Years)</em>
             </div>
-        <button className={styles.button} onClick={handleApplyClick}>
-          Apply Now
-          <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
-            <path
-              clip-rule="evenodd"
-              d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z"
-              fill-rule="evenodd"
-            ></path>
-          </svg>
-        </button>
+            <button class={styles.cssbuttonsiobutton} onClick={handleApplyClick}>
+              Get started
+              <div class={styles.icon}>
+                <svg
+                  height="24"
+                  width="24"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M0 0h24v24H0z" fill="none"></path>
+                  <path
+                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </div>
+            </button>
           </div>
         ))}
       </div>
