@@ -16,11 +16,12 @@ export const sendMessage = async () => {
     const response = await axios.post(url, payload, {
       headers: {
         Authorization:
-          "Bearer EAAIJbQEihXMBO5bYYZB1ZCYtoRJyGYzsd06dr4F8PGUasDWu8ZARKSa3mrMuSChVzjpEcqU2upZAvNBb3qaczZBoIK809g3uOYHvX18ft8ro28e6ZACkZBO5hDxJj66Sl9nTDw9MKpmGJoCC8pYwacGrKkAhEupCoWZCOXEtSmDw4pKY18iVl2QXpFilwcHuzQ9dBYsqOysf0u8Sb8mDWZAF4G4ZBHWCMZD",
+          "Bearer EAAIJbQEihXMBO01VonrSOJr5Cp3Mh5BIfurcDVnkderZAg7ZBRt2zrXjcZAaz2KUgkpX9jNFwsvfzO4uId10TEkfe7t0ozp3eZA3ZA1FqBBYeOZAmFu5pwd5sBEcgIK37HxRXulwpO7GQblUsoeOhXItKSSHqLoomeLfXEGvm2dADw7YaLTjtnbPqwNOEh9kysgKg4WZAK6IFb5ZBiXVZCh1jBM2XF8QZD",
         "Content-Type": "application/json",
       },
     });
     console.log("Message sent successfully:", response.data);
+    alert("Request Sent");
   } catch (error) {
     if (error.response) {
       console.error(
@@ -28,6 +29,7 @@ export const sendMessage = async () => {
         error.response.status,
         error.response.statusText
       );
+      alert("Try again later");
     } else {
       console.error("Error sending message:", error.message);
     }
